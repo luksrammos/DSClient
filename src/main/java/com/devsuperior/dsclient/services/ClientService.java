@@ -44,8 +44,13 @@ public class ClientService {
         copyDtoEntity(dto, entity);
         entity = repository.save(entity);
         return new ClientDTO(entity);
-
     }
+
+    @Transactional
+    public void delete(Long id){
+        repository.deleteById(id);
+    }
+
 
     private void copyDtoEntity(ClientDTO dto, Client entity) {
 
