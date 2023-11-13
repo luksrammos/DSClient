@@ -1,41 +1,46 @@
 # DSClient - DESAFIO CRUD
 
-Este projeto Java é um sistema de gerenciamento de clientes com operações básicas de CRUD (Create, Read, Update, Delete). Ele utiliza o framework Spring Boot e integra tecnologias como Spring Data JPA para acesso ao banco de dados e Spring Web para criar uma API REST. Abaixo estão os principais componentes e funcionalidades do projeto:
+Este projeto Java é um sistema de gerenciamento de clientes com operações básicas de CRUD (Create, Read, Update, Delete). Ele utiliza o framework Spring Boot e integra tecnologias como Spring Data JPA para acesso ao banco de dados e Spring Web para criar uma API REST. 
+
+Abaixo estão os principais componentes e funcionalidades do projeto:
 
 ## Componentes Principais:
-Entidades (entities):
 
-A classe Client representa a entidade no banco de dados, mapeada com JPA.
-Controladores (controllers):
+**1. Entidades (entities):**
 
-ClientController é um controlador REST que manipula operações relacionadas à entidade Client.
-Manipulador de Exceções (handlers):
+* A classe Client representa a entidade no banco de dados, mapeada com JPA.
 
-ControllerExceptionHandler trata exceções personalizadas e fornece respostas HTTP apropriadas.
-DTOs (dto):
+**2. Controladores (controllers):**
 
-ClientDTO: Representa a entidade Client de forma simplificada para interações com a API.
-CustomError: DTO para representar erros personalizados.
-ValidationError: Estende CustomError e inclui uma lista de mensagens de erro de campo.
-Serviços (services):
+* ClientController é um controlador REST que manipula operações relacionadas à entidade Client.
 
-ClientService: Contém a lógica de negócios para operações relacionadas a clientes.
-Exceções (exceptions):
+**3. Manipulador de Exceções (handlers):**
+* ControllerExceptionHandler: Trata exceções personalizadas e fornece respostas HTTP apropriadas.
 
-DatabaseException: Exceção para erros relacionados a operações no banco de dados.
-ResourceNotFoundException: Exceção para indicar que um recurso não foi encontrado.
-Repositórios (repositories):
+**4. DTOs (dto):**
+* ClientDTO: Representa a entidade Client de forma simplificada para interações com a API.
+* CustomError: DTO para representar erros personalizados.
+* ValidationError: Estende CustomError e inclui uma lista de mensagens de erro de campo.
 
-ClientRepository: Interface estendendo JpaRepository para interagir com a entidade Client no banco de dados.
-Configurações de Teste (application-test.properties):
+**5. Serviços (services):**
+* ClientService: Contém a lógica de negócios para operações relacionadas a clientes.
 
-Configurações específicas para testes usando um banco de dados H2 em memória.
-Configurações Gerais (application.properties):
+**6. Exceções (exceptions):**
+* DatabaseException: Exceção para erros relacionados a operações no banco de dados.
+* ResourceNotFoundException: Exceção para indicar que um recurso não foi encontrado.
 
-Define o perfil ativo como "test".
-Dados de Exemplo (import.sql):
+**7. Repositórios (repositories):**
+* ClientRepository: Interface estendendo JpaRepository para interagir com a entidade Client no banco de dados.
 
-Contém dados de exemplo para serem importados no banco de dados.
+**8. Configurações de Teste (application-test.properties):**
+* Configurações específicas para testes usando um banco de dados H2 em memória.
+
+**9. Configurações Gerais (application.properties):**
+* Define o perfil ativo como "test".
+
+**10. Dados de Exemplo (import.sql):**
+* Contém dados de exemplo para serem importados no banco de dados.
+
 ## Funcionalidades Principais:
 Operações CRUD: O sistema oferece operações básicas de Create, Read, Update e Delete para entidades Client.
 Tratamento de Exceções: Exceções personalizadas são tratadas pelo manipulador de exceções, fornecendo respostas HTTP apropriadas.
